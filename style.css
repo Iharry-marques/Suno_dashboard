@@ -1,19 +1,128 @@
 body {
-    font-family: Arial, sans-serif;
-    margin: 20px;
-  }
-  
-  nav {
-    margin-bottom: 20px;
-  }
-  
-  button {
-    margin-right: 10px;
-    padding: 10px 20px;
-    cursor: pointer;
-  }
-  
-  .tab-content {
-    margin-top: 20px;
-  }
+  font-family: Arial, sans-serif;
+  margin: 20px;
+}
+
+nav {
+  margin-bottom: 20px;
+}
+
+button {
+  margin-right: 10px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.tab-content {
+  margin-top: 20px;
+}
+
+.gantt {
+  margin: 10px;
+}
+
+.details-container {
+  border: 1px solid #ccc;
+  background-color: #f9f9f9;
+  padding: 10px;
+}
+
+/* Colors group_subgroup - client - tipo */
+
+/* Criacao - Cliente A */
+.blue-lightgreen-darkblue .bar-progress {
+  background-color: darkblue;
+}
+.blue-lightgreen-darkblue .bar {
+  background-color: blue;
+}
+
+.blue-lightgreen-lightblue .bar-progress {
+  background-color: lightblue;
+}
+.blue-lightgreen-lightblue .bar {
+  background-color: blue;
+}
+
+.blue-lightgreen-gray .bar-progress {
+  background-color: gray;
+}
+.blue-lightgreen-gray .bar {
+  background-color: blue;
+}
+/* Criacao - Cliente B */
+.blue-lightcoral-darkblue .bar-progress {
+  background-color: darkblue;
+}
+.blue-lightcoral-darkblue .bar {
+  background-color: blue;
+}
+
+.blue-lightcoral-lightblue .bar-progress {
+  background-color: lightblue;
+}
+.blue-lightcoral-lightblue .bar {
+  background-color: blue;
+}
+
+.blue-lightcoral-gray .bar-progress {
+  background-color: gray;
+}
+.blue-lightcoral-gray .bar {
+  background-color: blue;
+}
+/* Criacao - Default */
+.blue-lightgray-darkblue .bar-progress {
+  background-color: darkblue;
+}
+.blue-lightgray-darkblue .bar {
+  background-color: blue;
+}
+
+.blue-lightgray-lightblue .bar-progress {
+  background-color: lightblue;
+}
+.blue-lightgray-lightblue .bar {
+  background-color: blue;
+}
+
+.blue-lightgray-gray .bar-progress {
+  background-color: gray;
+}
+.blue-lightgray-gray .bar {
+  background-color: blue;
+}
+
+/* Midia */
+.purple-lightgreen-darkblue .bar-progress{background-color: darkblue;} .purple-lightgreen-darkblue .bar{background-color: purple;}
+.purple-lightgreen-lightblue .bar-progress{background-color: lightblue;} .purple-lightgreen-lightblue .bar{background-color: purple;}
+.purple-lightgreen-gray .bar-progress{background-color: gray;} .purple-lightgreen-gray .bar{background-color: purple;}
+.purple-lightcoral-darkblue .bar-progress{background-color: darkblue;} .purple-lightcoral-darkblue .bar{background-color: purple;}
+.purple-lightcoral-lightblue .bar-progress{background-color: lightblue;} .purple-lightcoral-lightblue .bar{background-color: purple;}
+.purple-lightcoral-gray .bar-progress{background-color: gray;} .purple-lightcoral-gray .bar{background-color: purple;}
+.purple-lightgray-darkblue .bar-progress{background-color: darkblue;} .purple-lightgray-darkblue .bar{background-color: purple;}
+.purple-lightgray-lightblue .bar-progress{background-color: lightblue;} .purple-lightgray-lightblue .bar{background-color: purple;}
+.purple-lightgray-gray .bar-progress{background-color: gray;} .purple-lightgray-gray .bar{background-color: purple;}
+
+/* Producao */
+.orange-lightgreen-darkblue .bar-progress{background-color: darkblue;} .orange-lightgreen-darkblue .bar{background-color: orange;}
+.orange-lightgreen-lightblue .bar-progress{background-color: lightblue;} .orange-lightgreen-lightblue .bar{background-color: orange;}
+.orange-lightgreen-gray .bar-progress{background-color: gray;} .orange-lightgreen-gray .bar{background-color: orange;}
+.orange-lightcoral-darkblue .bar-progress{background-color: darkblue;} .orange-lightcoral-darkblue .bar{background-color: orange;}
+.orange-lightcoral-lightblue .bar-progress{background-color: lightblue;} .orange-lightcoral-lightblue .bar{background-color: orange;}
+.orange-lightcoral-gray .bar-progress{background-color: gray;} .orange-lightcoral-gray .bar{background-color: orange;}
+.orange-lightgray-darkblue .bar-progress{background-color: darkblue;} .orange-lightgray-darkblue .bar{background-color: orange;}
+.orange-lightgray-lightblue .bar-progress{background-color: lightblue;} .orange-lightgray-lightblue .bar{background-color: orange;}
+.orange-lightgray-gray .bar-progress{background-color: gray;} .orange-lightgray-gray .bar{background-color: orange;}
+
+/* Default */
+.gray-lightgreen-darkblue .bar-progress{background-color: darkblue;} .gray-lightgreen-darkblue .bar{background-color: gray;}
+.gray-lightgreen-lightblue .bar-progress{background-color: lightblue;} .gray-lightgreen-lightblue .bar{background-color: gray;}
+.gray-lightgreen-gray .bar-progress{background-color: gray;} .gray-lightgreen-gray .bar{background-color: gray;}
+.gray-lightcoral-darkblue .bar-progress{background-color: darkblue;} .gray-lightcoral-darkblue .bar{background-color: gray;}
+.gray-lightcoral-lightblue .bar-progress{background-color: lightblue;} .gray-lightcoral-lightblue .bar{background-color: gray;}
+.gray-lightcoral-gray .bar-progress{background-color: gray;} .gray-lightcoral-gray .bar{background-color: gray;}
+.gray-lightgray-darkblue .bar-progress{background-color: darkblue;} .gray-lightgray-darkblue .bar{background-color: gray;}
+.gray-lightgray-lightblue .bar-progress{background-color: lightblue;} .gray-lightgray-lightblue .bar{background-color: gray;}
+.gray-lightgray-gray .bar-progress{background-color: gray;} .gray-lightgray-gray .bar{background-color: gray;}
   

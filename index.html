@@ -8,6 +8,39 @@
   <script src="https://unpkg.com/frappe-gantt/dist/frappe-gantt.min.js"></script>
 </head>
 <body>
+  <div class="filters-section">
+    <div class="filter-container">
+      <label for="filter-group">Grupo (Equipe):</label>
+      <select id="filter-group">
+        <option value="">Todos</option>
+      </select>
+    </div>
+    <div class="filter-container">
+      <label for="filter-client">Cliente:</label>
+      <select id="filter-client">
+        <option value="">Todos</option>
+      </select>
+    </div>
+    <div class="filter-container">
+      <label for="filter-type">Tipo:</label>
+      <select id="filter-type">
+        <option value="">Todos</option>
+      </select>
+    </div>
+    <div class="filter-container">
+      <label for="filter-status">Status:</label>
+      <select id="filter-status">
+        <option value="">Todos</option>
+      </select>
+    </div>
+  </div>
+  <div id="controls">
+    <button id="btn-day">Dia</button>
+    <button id="btn-week">Semana</button>
+    <button id="btn-month">Mês</button>
+    <button id="btn-today">Hoje</button>
+    <button id="btn-fullscreen">Tela Cheia</button>
+  </div>
 
   <nav>
     <button onclick="showTab('equipe')">Por Equipe</button>
