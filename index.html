@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard Gantt - Somos Creators</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://unpkg.com/frappe-gantt/dist/frappe-gantt.min.js"></script>
+</head>
+<body>
+
+  <nav>
+    <button onclick="showTab('equipe')">Por Equipe</button>
+    <button onclick="showTab('cliente')">Por Cliente</button>
+  </nav>
+
+  <div id="tabs">
+    <div id="tab-equipe" class="tab-content">
+      <h2>Gráfico Gantt - Por Equipe</h2>
+      <svg id="gantt-equipe"></svg>
+    </div>
+
+    <div id="tab-cliente" class="tab-content" style="display:none;">
+      <h2>Gráfico Gantt - Por Cliente</h2>
+      <svg id="gantt-cliente"></svg>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
