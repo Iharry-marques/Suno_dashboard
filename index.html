@@ -3,60 +3,123 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dashboard Gantt - Somos Creators</title>
+  <title>Suno Dashboard - SOMOS • CREATORS</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
   <script src="https://unpkg.com/frappe-gantt/dist/frappe-gantt.min.js"></script>
 </head>
 <body>
-  <div class="filters-section">
-    <div class="filter-container">
-      <label for="filter-group">Grupo (Equipe):</label>
-      <select id="filter-group">
-        <option value="">Todos</option>
-      </select>
+  <!-- Cabeçalho -->
+  <header>
+    <div class="logo">
+      <div class="suno-circle"></div>
+      <span>SUNO DASHBOARD</span>
     </div>
-    <div class="filter-container">
-      <label for="filter-client">Cliente:</label>
-      <select id="filter-client">
-        <option value="">Todos</option>
-      </select>
+    <div class="brand">SOMOS • CREATORS</div>
+  </header>
+
+  <div class="container">
+    <!-- Seção de Filtros -->
+    <div class="filters-panel">
+      <div class="filters-header">
+        <i class="fas fa-filter"></i> Filtros
+      </div>
+      
+      <div class="filters-grid">
+        <div class="filter-group">
+          <label>Grupo (Equipe):</label>
+          <select id="filter-group">
+            <option value="">Todos</option>
+          </select>
+        </div>
+        
+        <div class="filter-group">
+          <label>Cliente:</label>
+          <select id="filter-client">
+            <option value="">Todos</option>
+          </select>
+        </div>
+        
+        <div class="filter-group">
+          <label>Tipo:</label>
+          <select id="filter-type">
+            <option value="">Todos</option>
+          </select>
+        </div>
+        
+        <div class="filter-group">
+          <label>Status:</label>
+          <select id="filter-status">
+            <option value="">Todos</option>
+          </select>
+        </div>
+      </div>
+      
+      <div class="filter-actions">
+        <button id="btn-clear-filters">Limpar Filtros</button>
+      </div>
     </div>
-    <div class="filter-container">
-      <label for="filter-type">Tipo:</label>
-      <select id="filter-type">
-        <option value="">Todos</option>
-      </select>
+
+    <!-- Navegação por abas -->
+    <div class="tab-buttons">
+      <button id="btn-equipe" class="tab-button active">
+        <i class="fas fa-users"></i> Por Equipe
+      </button>
+      <button id="btn-cliente" class="tab-button">
+        <i class="fas fa-building"></i> Por Cliente
+      </button>
     </div>
-    <div class="filter-container">
-      <label for="filter-status">Status:</label>
-      <select id="filter-status">
-        <option value="">Todos</option>
-      </select>
+    
+    <!-- Controles de visualização -->
+    <div class="view-controls">
+      <div class="view-label">Visualização:</div>
+      <div class="view-buttons">
+        <button id="btn-day" class="view-button active">
+          <i class="fas fa-calendar-day"></i> Dia
+        </button>
+        <button id="btn-week" class="view-button">
+          <i class="fas fa-calendar-week"></i> Semana
+        </button>
+        <button id="btn-month" class="view-button">
+          <i class="fas fa-calendar-alt"></i> Mês
+        </button>
+      </div>
+      
+      <div class="action-buttons">
+        <button id="btn-hoje" class="action-button">
+          <i class="fas fa-calendar-check"></i> Hoje
+        </button>
+        <button id="btn-fullscreen" class="action-button">
+          <i class="fas fa-expand"></i> <span>Tela Cheia</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Conteúdo das abas -->
+    <div id="tab-equipe" class="tab-content active">
+      <h2><i class="fas fa-users"></i> Cronograma por Equipe</h2>
+      <div class="gantt-container">
+        <div id="gantt-equipe" class="gantt"></div> <!-- ESTE DEVE ESTAR COM HEIGHT DEFINIDO -->
+      </div>
+    </div>
+
+    <div id="tab-cliente" class="tab-content">
+      <h2><i class="fas fa-building"></i> Cronograma por Cliente</h2>
+      <div class="gantt-container">
+        <div id="gantt-cliente" class="gantt"></div>
+      </div>
     </div>
   </div>
-  <div id="controls">
-    <button id="btn-day">Dia</button>
-    <button id="btn-week">Semana</button>
-    <button id="btn-month">Mês</button>
-    <button id="btn-today">Hoje</button>
-    <button id="btn-fullscreen">Tela Cheia</button>
-  </div>
 
-  <nav>
-    <button onclick="showTab('equipe')">Por Equipe</button>
-    <button onclick="showTab('cliente')">Por Cliente</button>
-  </nav>
+  <!-- Rodapé -->
+  <footer>
+    <div>© 2025 SOMOS • CREATORS | Dashboard desenvolvido para Suno</div>
+  </footer>
 
-  <div id="tabs">
-    <div id="tab-equipe" class="tab-content">
-      <h2>Gráfico Gantt - Por Equipe</h2>
-      <svg id="gantt-equipe"></svg>
-    </div>
-
-    <div id="tab-cliente" class="tab-content" style="display:none;">
-      <h2>Gráfico Gantt - Por Cliente</h2>
-      <svg id="gantt-cliente"></svg>
-    </div>
+  <!-- Console de Depuração (remover em produção) -->
+  <div id="debug-console" class="debug">
+    <h3>Console de Depuração</h3>
+    <pre id="debug-output"></pre>
   </div>
 
   <script src="script.js"></script>
